@@ -4,7 +4,7 @@ FROM golang:1.16.0-buster
 ADD . /go/src/github.com/patelaneri792/go-web-server
 
 # Build the golang-docker command inside the container.
-RUN go install github.com/patelaneri792/go-web-server
+RUN go install github.com/patelaneri792/go-web-server@latest
 
 # Run the golang-docker command when the container starts.
 ENTRYPOINT /go/bin/go-web-server
